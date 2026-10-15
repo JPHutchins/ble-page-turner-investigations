@@ -103,6 +103,16 @@ def passthrough_pairing(keys: InitiatorKeys) -> Callable[[Connection], PairingCo
 	)
 
 
+def passthrough_irk(identity: Address) -> bytes:
+	"""kindle-hid-passthrough's transport.py derivation, from our identity address instead of the
+	controller's public one, which a Zephyr hci_uart reports as all zeros.
+
+	>>> passthrough_irk(Address("F0:F1:F2:F3:F4:F5")).hex()
+	'f5f4f3f2f1f0f5f4f3f2f1f0f5f4f3f2'
+	"""
+	return (bytes(identity) * 3)[:16]
+
+
 def btsnoop_spec(path: PurePath) -> str:
 	"""Bumble `str.format`s the file name, so literal braces are escaped.
 
@@ -124,6 +134,7 @@ async def hci_device(
 		device.keystore = MemoryKeyStore()
 		device.pairing_config_factory = passthrough_pairing(initiator_keys)
 		await device.power_on()
+		device.irk = passthrough_irk(Address(own_address))
 		yield device
 
 
