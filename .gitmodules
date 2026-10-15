@@ -3,4 +3,4 @@
 	url = https://github.com/zampierilucas/kindle-hid-passthrough.git
 [submodule "external/kindle-button-mapper-rs"]
 	path = external/kindle-button-mapper-rs
-	url = https://github.com/zampierilucas/kindle-button-mapper-rs.git
+	url = https://github.com/JPHutchins/kindle-button-mapper-rs.git
