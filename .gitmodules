@@ -1,0 +1,6 @@
+[submodule "external/kindle-hid-passthrough"]
+	path = external/kindle-hid-passthrough
+	url = https://github.com/zampierilucas/kindle-hid-passthrough.git
+[submodule "external/kindle-button-mapper-rs"]
+	path = external/kindle-button-mapper-rs
+	url = https://github.com/zampierilucas/kindle-button-mapper-rs.git
