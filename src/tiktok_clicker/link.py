@@ -32,6 +32,7 @@ from tiktok_clicker.model import (
 	GattDescriptor,
 	GattService,
 	Indication,
+	InitiatorKeys,
 	NotRead,
 	Read,
 	ReadFailed,
@@ -58,8 +59,11 @@ REPORT_PROTOCOL: Final = b"\x01"
 class PassthroughPairingDelegate(PairingDelegate):
 	"""Pairs the way kindle-hid-passthrough's `AutoAcceptPairingDelegate` does."""
 
-	def __init__(self) -> None:
-		super().__init__(io_capability=PairingDelegate.DISPLAY_OUTPUT_AND_YES_NO_INPUT)
+	def __init__(self, initiator_keys: PairingDelegate.KeyDistribution) -> None:
+		super().__init__(
+			io_capability=PairingDelegate.DISPLAY_OUTPUT_AND_YES_NO_INPUT,
+			local_initiator_key_distribution=initiator_keys,
+		)
 
 	async def accept(self) -> bool:
 		return True
@@ -74,8 +78,29 @@ class PassthroughPairingDelegate(PairingDelegate):
 		return None
 
 
-def passthrough_pairing(_connection: Connection) -> PairingConfig:
-	return PairingConfig(sc=True, mitm=True, bonding=True, delegate=PassthroughPairingDelegate())
+def key_distribution(keys: InitiatorKeys) -> PairingDelegate.KeyDistribution:
+	"""`ENC_ID` is Bumble's default, and so kindle-hid-passthrough's.
+
+	>>> key_distribution(InitiatorKeys.ENC_ID) == PairingDelegate.DEFAULT_KEY_DISTRIBUTION
+	True
+	"""
+	match keys:
+		case InitiatorKeys.ENC_ID:
+			return (
+				PairingDelegate.KeyDistribution.DISTRIBUTE_ENCRYPTION_KEY
+				| PairingDelegate.KeyDistribution.DISTRIBUTE_IDENTITY_KEY
+			)
+		case InitiatorKeys.ID:
+			return PairingDelegate.KeyDistribution.DISTRIBUTE_IDENTITY_KEY
+
+
+def passthrough_pairing(keys: InitiatorKeys) -> Callable[[Connection], PairingConfig]:
+	return lambda _connection: PairingConfig(
+		sc=True,
+		mitm=True,
+		bonding=True,
+		delegate=PassthroughPairingDelegate(key_distribution(keys)),
+	)
 
 
 def btsnoop_spec(path: PurePath) -> str:
@@ -89,13 +114,15 @@ def btsnoop_spec(path: PurePath) -> str:
 
 
 @asynccontextmanager
-async def hci_device(spec: str, own_address: str, snoop: PurePath) -> AsyncGenerator[Device]:
+async def hci_device(
+	spec: str, own_address: str, snoop: PurePath, initiator_keys: InitiatorKeys
+) -> AsyncGenerator[Device]:
 	async with SnoopingTransport.create_with(
 		await open_transport(spec), create_snooper(btsnoop_spec(snoop))
 	) as hci:
 		device = Device.with_hci("tiktok-clicker", Address(own_address), hci.source, hci.sink)
 		device.keystore = MemoryKeyStore()
-		device.pairing_config_factory = passthrough_pairing
+		device.pairing_config_factory = passthrough_pairing(initiator_keys)
 		await device.power_on()
 		yield device
 

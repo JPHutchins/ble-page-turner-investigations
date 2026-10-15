@@ -22,6 +22,11 @@ class Verdict(StrEnum):
 	QUIT = "quit"
 
 
+class InitiatorKeys(StrEnum):
+	ENC_ID = "enc-id"
+	ID = "id"
+
+
 class Tagged(Struct, frozen=True, tag_field="kind"):
 	pass
 
@@ -90,6 +95,7 @@ class Started(Tagged, frozen=True, tag="started"):
 	version: str
 	hci: str
 	target: str
+	initiator_keys: InitiatorKeys = InitiatorKeys.ENC_ID
 
 
 class Connected(Tagged, frozen=True, tag="connected"):
