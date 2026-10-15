@@ -25,7 +25,7 @@ from tiktok_clicker.model import (
 	StepEnded,
 	Verdict,
 )
-from tiktok_clicker.plan import Answer, instruction, parse_answer
+from tiktok_clicker.plan import Answer, default_verdict, instruction, parse_answer
 from tiktok_clicker.render import describe, summarize
 
 if TYPE_CHECKING:
@@ -103,9 +103,13 @@ async def perform(context: StepContext, step: Step) -> StepResult:
 	context.record(StepBegan(t=context.clock(), step=step))
 	await context.console.ask(f"\n>>> {instruction(step)}\n    Press Enter when done. ")
 	events = drain(context.inbox)
+	default = default_verdict(step, reported=any(isinstance(event, Report) for event in events))
 	context.console.say(f"    {summarize(events)}")
 	answer = parse_answer(
-		await context.console.ask("    Enter = keep, r = redo, q = quit, or type a note: ")
+		await context.console.ask(
+			f"    Enter = {default}, k = keep, r = redo, q = quit, or type a note: "
+		),
+		default,
 	)
 	context.record(
 		StepEnded(t=context.clock(), step=step, verdict=answer.verdict, note=answer.note)
@@ -145,7 +149,8 @@ async def run_guided(session: Session, steps: tuple[Step, ...]) -> None:
 		case LinkFailure(error=error):
 			session.steps.record(LinkFailed(t=session.steps.clock(), error=error))
 			answer = parse_answer(
-				await console.ask("Wake the ring, then press Enter to retry, or q to quit: ")
+				await console.ask("Wake the ring, then press Enter to retry, or q to quit: "),
+				Verdict.KEEP,
 			)
 			await run_guided(session, () if answer.verdict is Verdict.QUIT else steps)
 		case tuple() as remaining:

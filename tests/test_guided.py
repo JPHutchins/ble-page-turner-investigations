@@ -83,13 +83,26 @@ async def test_drop_during_a_step_hands_back_what_is_left() -> None:
 	assert await run_steps(context, (SWITCH, PRESS_UP)) == (PRESS_UP,)
 
 
-async def test_drop_during_a_step_keeps_a_redo_for_the_next_link() -> None:
-	context, _, _ = scripted(("", (DROPPED,)), ("r", ()))
+async def test_empty_press_defaults_to_redo() -> None:
+	context, journaled, _ = scripted(("", ()), ("", ()), ("", (TAP,)), ("", ()))
+	assert await run_steps(context, (PRESS_UP,)) == ()
+	assert verdicts(journaled) == [(PRESS_UP, Verdict.REDO), (PRESS_UP, Verdict.KEEP)]
+
+
+async def test_empty_press_can_still_be_kept() -> None:
+	context, journaled, _ = scripted(("", ()), ("k", ()))
+	assert await run_steps(context, (PRESS_UP,)) == ()
+	assert verdicts(journaled) == [(PRESS_UP, Verdict.KEEP)]
+
+
+async def test_press_lost_to_a_drop_is_redone_on_the_next_link() -> None:
+	"""The first capture lost C-mode DOWN: the link dropped mid-step and Enter kept the empty step."""
+	context, _, _ = scripted(("", (DROPPED,)), ("", ()))
 	assert await run_steps(context, (PRESS_UP, PRESS_DOWN)) == (PRESS_UP, PRESS_DOWN)
 
 
 async def test_drop_between_steps_relinks_before_prompting() -> None:
-	context, journaled, _ = scripted(("", ()), ("", (DROPPED,)))
+	context, journaled, _ = scripted(("", (TAP,)), ("", (DROPPED,)))
 	assert await run_steps(context, (PRESS_UP, PRESS_DOWN)) == (PRESS_DOWN,)
 	assert not any(isinstance(entry, StepBegan) and entry.step == PRESS_DOWN for entry in journaled)
 

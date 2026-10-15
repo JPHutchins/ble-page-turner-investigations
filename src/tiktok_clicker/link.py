@@ -18,7 +18,9 @@ from bumble.gatt import (
 from bumble.hci import Address
 from bumble.keys import MemoryKeyStore
 from bumble.pairing import PairingConfig, PairingDelegate
+from bumble.snoop import create_snooper
 from bumble.transport import open_transport
+from bumble.transport.common import SnoopingTransport
 from bumble.utils import EventWatcher
 
 from tiktok_clicker.gatt import boot_protocol_handles, input_report_ids, uuid_text
@@ -39,6 +41,7 @@ from tiktok_clicker.model import (
 
 if TYPE_CHECKING:
 	from collections.abc import AsyncGenerator
+	from pathlib import PurePath
 
 	from bumble.device import Advertisement
 	from bumble.gatt_client import AttributeProxy, CharacteristicProxy, DescriptorProxy
@@ -75,9 +78,21 @@ def passthrough_pairing(_connection: Connection) -> PairingConfig:
 	return PairingConfig(sc=True, mitm=True, bonding=True, delegate=PassthroughPairingDelegate())
 
 
+def btsnoop_spec(path: PurePath) -> str:
+	"""Bumble `str.format`s the file name, so literal braces are escaped.
+
+	>>> from pathlib import PurePosixPath
+	>>> btsnoop_spec(PurePosixPath("captures/{x}.btsnoop"))
+	'btsnoop:file:captures/{{x}}.btsnoop'
+	"""
+	return f"btsnoop:file:{str(path).replace('{', '{{').replace('}', '}}')}"
+
+
 @asynccontextmanager
-async def hci_device(spec: str, own_address: str) -> AsyncGenerator[Device]:
-	async with await open_transport(spec) as hci:
+async def hci_device(spec: str, own_address: str, snoop: PurePath) -> AsyncGenerator[Device]:
+	async with SnoopingTransport.create_with(
+		await open_transport(spec), create_snooper(btsnoop_spec(snoop))
+	) as hci:
 		device = Device.with_hci("tiktok-clicker", Address(own_address), hci.source, hci.sink)
 		device.keystore = MemoryKeyStore()
 		device.pairing_config_factory = passthrough_pairing

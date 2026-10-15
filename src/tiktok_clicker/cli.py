@@ -59,14 +59,17 @@ async def guided(
 	own_address: Annotated[
 		str, Parameter(help="Static random address to connect from.")
 	] = "F0:F1:F2:F3:F4:F5",
-	out: Annotated[Path, Parameter(help="Directory to write the journal to.")] = Path("captures"),
+	out: Annotated[
+		Path, Parameter(help="Directory to write the journal and its HCI btsnoop log to.")
+	] = Path("captures"),
 ) -> None:
 	"""Walk through each mode and button, journaling every HID report the ring sends."""
 	path = out / f"{datetime.now(UTC):%Y%m%dT%H%M%SZ}-{address.replace(':', '').lower()}.jsonl"
+	snoop = path.with_suffix(".btsnoop")
 	terminal = Terminal()
 	inbox = asyncio.Queue[DeviceEvent]()
 	clock = partial(seconds_since, time.monotonic())
-	terminal.say(f"{GUIDE}\nJournal: {path}")
+	terminal.say(f"{GUIDE}\nJournal: {path}\nHCI snoop: {snoop}")
 	with journal(path) as append:
 		record = router(append, inbox, terminal)
 		record(
@@ -78,7 +81,7 @@ async def guided(
 				target=address,
 			)
 		)
-		async with hci_device(hci, own_address) as device:
+		async with hci_device(hci, own_address, snoop) as device:
 			await run_guided(
 				Session(
 					device=device, target=address, steps=StepContext(record, inbox, clock, terminal)

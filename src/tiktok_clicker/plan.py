@@ -57,19 +57,42 @@ class Answer(NamedTuple):
 	note: str
 
 
-def parse_answer(text: str) -> Answer:
-	"""Blank keeps the step, `r` redoes it, `q` quits, and anything else is kept as a note.
+def default_verdict(step: Step, reported: bool) -> Verdict:
+	"""A press or hold that produced no reports most likely missed the link.
 
-	>>> parse_answer("")
-	Answer(verdict=<Verdict.KEEP: 'keep'>, note='')
-	>>> parse_answer(" R ")
+	>>> default_verdict(Press(mode=Mode.C, button=Button.DOWN, count=3), reported=False)
+	<Verdict.REDO: 'redo'>
+	>>> default_verdict(Hold(mode=Mode.C, button=Button.DOWN, seconds=2), reported=True)
+	<Verdict.KEEP: 'keep'>
+	>>> default_verdict(SwitchMode(mode=Mode.T), reported=False)
+	<Verdict.KEEP: 'keep'>
+	"""
+	match step:
+		case SwitchMode():
+			return Verdict.KEEP
+		case Press() | Hold():
+			return Verdict.KEEP if reported else Verdict.REDO
+
+
+def parse_answer(text: str, default: Verdict) -> Answer:
+	"""Blank takes the default, `k` keeps, `r` redoes, `q` quits, anything else is a kept note.
+
+	>>> parse_answer("", Verdict.REDO)
 	Answer(verdict=<Verdict.REDO: 'redo'>, note='')
-	>>> parse_answer("q")
+	>>> parse_answer(" K ", Verdict.REDO)
+	Answer(verdict=<Verdict.KEEP: 'keep'>, note='')
+	>>> parse_answer("r", Verdict.KEEP)
+	Answer(verdict=<Verdict.REDO: 'redo'>, note='')
+	>>> parse_answer("q", Verdict.KEEP)
 	Answer(verdict=<Verdict.QUIT: 'quit'>, note='')
-	>>> parse_answer("LED blinked twice")
+	>>> parse_answer("LED blinked twice", Verdict.REDO)
 	Answer(verdict=<Verdict.KEEP: 'keep'>, note='LED blinked twice')
 	"""
 	match text.strip().lower():
+		case "":
+			return Answer(default, "")
+		case "k":
+			return Answer(Verdict.KEEP, "")
 		case "r":
 			return Answer(Verdict.REDO, "")
 		case "q":
