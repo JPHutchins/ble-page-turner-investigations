@@ -8,3 +8,6 @@ __pycache__/
 dist/
 captures/*.btsnoop
 hil/known_hosts
+hil/artifacts/
+hil/backup-*/
+hil/*.md5.txt

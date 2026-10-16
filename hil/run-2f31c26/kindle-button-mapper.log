@@ -1,0 +1,156 @@
+[2026-10-14T05:31:19.455Z INFO  kindle_button_mapper] Kindle Button Mapper 1.7.4 (build 12a8a87) starting...
+[2026-10-14T05:31:19.455Z INFO  kindle_button_mapper] Config: devices=0, gestures=0, debounce=0ms, long_press=500ms, repeat=100ms
+[2026-10-14T05:31:19.547Z INFO  kindle_button_mapper::vkeyboard] No page buttons found, page turns go to the window in front
+[2026-10-14T05:31:19.562Z INFO  kindle_button_mapper::vkeyboard] Key injection FIFO at /var/run/kindle-button-mapper-key.fifo
+[2026-10-14T05:33:53.660Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 1)
+[2026-10-14T05:33:53.660Z INFO  kindle_button_mapper] [f3] new in the config, starting a worker
+[2026-10-14T05:33:53.777Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-14T05:33:54.667Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-14T05:33:54.687Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-14T05:33:54.687Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:33:54.687Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-14T05:36:09.468Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 2)
+[2026-10-14T05:36:26.295Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 3)
+[2026-10-14T05:36:26.444Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-14T05:36:26.567Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-14T05:36:27.347Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-14T05:36:27.397Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-14T05:36:27.397Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:36:27.397Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-14T05:51:52.467Z INFO  kindle_button_mapper] Kindle Button Mapper 1.7.4 (build 12a8a87) starting...
+[2026-10-14T05:51:52.467Z INFO  kindle_button_mapper] Config: devices=1, gestures=0, debounce=0ms, long_press=500ms, repeat=100ms
+[2026-10-14T05:51:52.577Z INFO  kindle_button_mapper::vkeyboard] No page buttons found, page turns go to the window in front
+[2026-10-14T05:51:52.577Z INFO  kindle_button_mapper::vkeyboard] Key injection FIFO at /var/run/kindle-button-mapper-key.fifo
+[2026-10-14T05:51:52.707Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-14T05:51:54.147Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-14T05:51:54.167Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-14T05:51:54.167Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:51:54.167Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-14T05:52:00.790Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 1)
+[2026-10-14T05:52:18.417Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 2)
+[2026-10-14T05:52:18.871Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-14T05:52:19.057Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-14T05:52:19.197Z INFO  kindle_button_mapper::input] Found device at /dev/input/event2
+[2026-10-14T05:52:19.198Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-14T05:52:19.198Z INFO  kindle_button_mapper::input] Reading events from F3 Touchscreen (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:52:19.198Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-14T05:54:28.035Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 3)
+[2026-10-14T05:54:28.465Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-14T05:54:28.757Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-14T05:54:28.757Z INFO  kindle_button_mapper::input] Exclusive grab disabled, sharing device
+[2026-10-14T05:54:28.757Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:54:28.757Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-14T05:55:05.900Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 4)
+[2026-10-14T05:55:06.368Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-14T05:55:06.627Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-14T05:55:06.627Z WARN  kindle_button_mapper::input] Cannot grab device: Resource busy (os error 16), continuing without exclusive access
+[2026-10-14T05:55:06.627Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-14T05:55:06.627Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T02:54:56.105Z INFO  kindle_button_mapper] Kindle Button Mapper 1.7.4 (build 2f31c26) starting...
+[2026-10-16T02:54:56.105Z INFO  kindle_button_mapper] Config: devices=1, gestures=0, debounce=0ms, long_press=500ms, repeat=100ms
+[2026-10-16T02:54:56.244Z INFO  kindle_button_mapper::vkeyboard] No page buttons found, page turns go to the window in front
+[2026-10-16T02:54:56.244Z INFO  kindle_button_mapper::vkeyboard] Key injection FIFO at /var/run/kindle-button-mapper-key.fifo
+[2026-10-16T02:54:56.364Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-16T02:55:59.953Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T02:55:59.954Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T02:55:59.954Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T02:55:59.954Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T02:59:08.135Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 1)
+[2026-10-16T02:59:08.135Z INFO  kindle_button_mapper] [f3_touchscreen] new in the config, starting a worker
+[2026-10-16T02:59:08.246Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T02:59:08.343Z INFO  kindle_button_mapper::input] Found device at /dev/input/event2
+[2026-10-16T02:59:08.343Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T02:59:08.343Z INFO  kindle_button_mapper::input] Reading events from F3 Touchscreen (uniq="EB:80:03:88:70:8B")
+[2026-10-16T02:59:08.343Z INFO  kindle_button_mapper] [f3_touchscreen] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T02:59:08.423Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T02:59:08.423Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T02:59:08.423Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T02:59:08.423Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:00:36.925Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 2)
+[2026-10-16T03:00:37.084Z INFO  kindle_button_mapper] [f3_touchscreen] config changed, picking the device back up
+[2026-10-16T03:00:37.151Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T03:00:37.323Z INFO  kindle_button_mapper::input] Found device at /dev/input/event2
+[2026-10-16T03:00:37.323Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:00:37.323Z INFO  kindle_button_mapper::input] Reading events from F3 Touchscreen (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:00:37.413Z INFO  kindle_button_mapper] [f3_touchscreen] not a gamepad, sharing it instead of grabbing
+[2026-10-16T03:00:37.413Z INFO  kindle_button_mapper] [f3_touchscreen] device connected (shared)
+[2026-10-16T03:00:37.433Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T03:00:37.433Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:00:37.433Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:00:37.433Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:02:29.586Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-16T03:02:29.698Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:02:32.859Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:02:34.295Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:02:35.730Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:02:36.862Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:02:38.500Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:03:53.102Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 3)
+[2026-10-16T03:03:53.189Z INFO  kindle_button_mapper] [f3_touchscreen] applying reloaded mappings
+[2026-10-16T03:03:53.288Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T03:03:53.443Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T03:03:53.443Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:03:53.443Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:03:53.443Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:04:01.333Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-16T03:04:01.539Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:04:45.581Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 4)
+[2026-10-16T03:04:45.608Z INFO  kindle_button_mapper] [f3_touchscreen] applying reloaded mappings
+[2026-10-16T03:04:45.655Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T03:04:45.813Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T03:04:45.813Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:04:45.813Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:04:45.813Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:04:48.984Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 5)
+[2026-10-16T03:04:49.112Z INFO  kindle_button_mapper] [f3_touchscreen] applying reloaded mappings
+[2026-10-16T03:04:49.473Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T03:04:49.633Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T03:04:49.633Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:04:49.633Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:04:49.633Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:04:51.385Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 6)
+[2026-10-16T03:04:51.616Z INFO  kindle_button_mapper] [f3_touchscreen] applying reloaded mappings
+[2026-10-16T03:04:51.803Z INFO  kindle_button_mapper] [f3] config changed, picking the device back up
+[2026-10-16T03:04:51.973Z INFO  kindle_button_mapper::input] Found device at /dev/input/event3
+[2026-10-16T03:04:51.973Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:04:51.973Z INFO  kindle_button_mapper::input] Reading events from F3 Consumer Control (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:04:51.973Z INFO  kindle_button_mapper] [f3] no mappings and not a gamepad — leaving it alone until something is mapped
+[2026-10-16T03:05:11.729Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-16T03:05:11.846Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:12.153Z INFO  kindle_button_mapper::action] Finished in 307ms: /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:13.284Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:13.593Z INFO  kindle_button_mapper::action] Finished in 308ms: /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:14.321Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:05:14.623Z INFO  kindle_button_mapper::action] Finished in 302ms: /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:05:14.946Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:05:15.558Z INFO  kindle_button_mapper::mapper] Gesture 'tap' [unmapped]
+[2026-10-16T03:05:15.663Z INFO  kindle_button_mapper::mapper] Gesture 'tap' [unmapped]
+[2026-10-16T03:05:17.495Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:19.029Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:20.260Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:21.388Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:22.620Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:05:24.055Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:06:40.476Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-16T03:06:40.598Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:06:42.128Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:06:44.675Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:08:08.985Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-16T03:08:09.203Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:08:11.843Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:08:13.580Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:08:15.216Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:08:21.208Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:08:23.753Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:08:53.072Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-16T03:08:54.101Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_left' [unmapped]
+[2026-10-16T03:08:56.852Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_down' -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-16T03:24:43.538Z ERROR kindle_button_mapper] [f3_touchscreen] event loop error: Read error: No such device (os error 19)
+[2026-10-16T03:24:43.603Z INFO  kindle_button_mapper] [f3_touchscreen] reconnecting in 1 second...
+[2026-10-16T03:24:44.763Z INFO  kindle_button_mapper::input] Waiting for device to appear...
+[2026-10-16T03:25:40.284Z INFO  kindle_button_mapper::input] Found device at /dev/input/event2
+[2026-10-16T03:25:40.323Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-16T03:25:40.324Z INFO  kindle_button_mapper::input] Reading events from F3 Touchscreen (uniq="EB:80:03:88:70:8B")
+[2026-10-16T03:25:40.413Z INFO  kindle_button_mapper] [f3_touchscreen] not a gamepad, sharing it instead of grabbing
+[2026-10-16T03:25:40.413Z INFO  kindle_button_mapper] [f3_touchscreen] device connected (shared)
+[2026-10-16T03:26:35.780Z INFO  kindle_button_mapper::mapper] Gesture 'swipe_up' -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page

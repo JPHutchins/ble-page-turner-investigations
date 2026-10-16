@@ -1,0 +1,65 @@
+[2026-10-16T02:57:17.896Z INFO  kindle_button_mapper::waf_helper] WAF helper listening on 127.0.0.1:8322
+[2026-10-16T02:57:20.674Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-16T02:57:20.674Z INFO  kindle_button_mapper::waf_helper] GET /layouts
+[2026-10-16T02:57:20.676Z INFO  kindle_button_mapper::waf_helper] GET /actions
+[2026-10-16T02:57:20.688Z INFO  kindle_button_mapper::waf_helper] GET /config
+[2026-10-16T02:57:36.442Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:57:36.442Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-16T02:57:40.445Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:57:44.449Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:57:48.452Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:57:52.450Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:57:56.457Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:00.456Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:04.459Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:08.461Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:12.465Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:16.468Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:19.337Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB:80:03:88:70:8B&mouse=false
+[2026-10-16T02:58:20.469Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:20.558Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3&uniq=EB:80:03:88:70:8B&mouse=false
+[2026-10-16T02:58:21.787Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Consumer%20Control&uniq=EB:80:03:88:70:8B&mouse=false
+[2026-10-16T02:58:24.469Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:28.473Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:32.476Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:36.480Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:40.484Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:44.487Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:48.487Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:52.492Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:58:56.497Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:59:00.501Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:59:04.505Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T02:59:08.094Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T02:59:08.114Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T02:59:08.121Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
+[2026-10-16T03:00:09.051Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B&mouse=false
+[2026-10-16T03:00:09.327Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-16T03:00:24.761Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B&mouse=false
+[2026-10-16T03:00:25.077Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-16T03:00:36.823Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:00:36.841Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T03:00:36.849Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
+[2026-10-16T03:03:52.965Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:03:52.984Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T03:03:52.993Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
+[2026-10-16T03:04:02.571Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B&mouse=false
+[2026-10-16T03:04:02.827Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-16T03:04:25.977Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B&mouse=false
+[2026-10-16T03:04:26.237Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-16T03:04:31.358Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B&mouse=false
+[2026-10-16T03:04:31.617Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-16T03:04:40.061Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:04:42.131Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-16T03:04:42.132Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-16T03:04:45.461Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:04:45.484Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T03:04:45.491Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
+[2026-10-16T03:04:46.884Z INFO  kindle_button_mapper::waf_helper] GET /actions
+[2026-10-16T03:04:46.913Z INFO  kindle_button_mapper::waf_helper] GET /config
+[2026-10-16T03:04:48.870Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:04:48.900Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T03:04:48.907Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
+[2026-10-16T03:04:51.291Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-16T03:04:51.310Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-16T03:04:51.317Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
