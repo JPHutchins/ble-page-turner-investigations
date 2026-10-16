@@ -4,7 +4,7 @@ Tools and evidence from making cheap BLE "page turner" ring remotes, starting wi
 
 ## Findings
 
-- The F3 reports its buttons as a HID **Touch Screen**: every up or down press is a short swipe, not a key. The mapper names each press by the way it moved (`tap`, `swipe_left`, `swipe_right`, `swipe_up`, `swipe_down`) so it binds without recording anything: [JPHutchins/kindle-button-mapper-rs#1](https://github.com/JPHutchins/kindle-button-mapper-rs/pull/1).
+- The F3 reports its buttons as a HID **Touch Screen**: every up or down press is a short swipe, not a key. The mapper names each press by the way it moved (`tap`, `swipe_left`, `swipe_right`, `swipe_up`, `swipe_down`) so it binds without recording anything: [zampierilucas/kindle-button-mapper-rs#91](https://github.com/zampierilucas/kindle-button-mapper-rs/pull/91) (developed in [JPHutchins/kindle-button-mapper-rs#1](https://github.com/JPHutchins/kindle-button-mapper-rs/pull/1)).
 - Linux kernels from 4.18 on (a Paperwhite 6 runs 5.15) split the ring into two input nodes with one Bluetooth address, **F3 Touchscreen** and **F3 Consumer Control**. With the address saved, the mapper read the wrong one until [zampierilucas/kindle-button-mapper-rs#90](https://github.com/zampierilucas/kindle-button-mapper-rs/pull/90) (issue [#89](https://github.com/zampierilucas/kindle-button-mapper-rs/issues/89)).
 - **Which device to pick in Button Mapper:** **F3 Touchscreen** for the up and down buttons. Add **F3 Consumer Control** as a second device only if you want the C-mode centre button, which is a plain volume key.
 
