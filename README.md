@@ -1,6 +1,6 @@
 # BLE page-turner investigations
 
-Tools and evidence from making cheap BLE "page turner" ring remotes, starting with the FiKavi **F3**, turn pages on a Kindle through [kindle-hid-passthrough](https://github.com/zampierilucas/kindle-hid-passthrough) and [kindle-button-mapper-rs](https://github.com/zampierilucas/kindle-button-mapper-rs).
+Tools and evidence from making cheap BLE "page turner" ring remotes, starting with the FiKavi **F3** ([product page](https://a.co/d/02kHmFEA)), turn pages on a Kindle through [kindle-hid-passthrough](https://github.com/zampierilucas/kindle-hid-passthrough) and [kindle-button-mapper-rs](https://github.com/zampierilucas/kindle-button-mapper-rs).
 
 ## Findings
 
