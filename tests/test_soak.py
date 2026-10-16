@@ -1,9 +1,9 @@
 import asyncio
 from typing import Final
 
-from tiktok_clicker.guided import StepContext, Terminal
-from tiktok_clicker.model import DeviceEvent, Disconnected, Entry, Report
-from tiktok_clicker.soak import Dropped, Held, describe_soak, hold
+from page_turner.guided import StepContext, Terminal
+from page_turner.model import DeviceEvent, Disconnected, Entry, Report
+from page_turner.soak import Dropped, Held, describe_soak, hold
 
 TAP: Final = Report(t=1.0, handle=0x1B, report_id=3, hex="07")
 

@@ -3,11 +3,11 @@
 import asyncio
 from typing import TYPE_CHECKING, NamedTuple
 
-from tiktok_clicker.link import Linked, LinkFailure, ring_link
-from tiktok_clicker.model import DeviceEvent, Disconnected
+from page_turner.link import Linked, LinkFailure, ring_link
+from page_turner.model import DeviceEvent, Disconnected
 
 if TYPE_CHECKING:
-	from tiktok_clicker.guided import Session, StepContext
+	from page_turner.guided import Session, StepContext
 
 
 class Held(NamedTuple):

@@ -9,7 +9,7 @@ from typing import TYPE_CHECKING, Final, NamedTuple
 
 import msgspec
 
-from tiktok_clicker.guard import Access, Denied, judge
+from page_turner.guard import Access, Denied, judge
 
 if TYPE_CHECKING:
 	from pathlib import Path

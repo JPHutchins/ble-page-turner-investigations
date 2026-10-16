@@ -701,6 +701,51 @@ wheels = [
 ]
 
 [[package]]
+name = "page-turner"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "bumble" },
+    { name = "cyclopts" },
+    { name = "msgspec" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "camas", extra = ["mcp"] },
+    { name = "mypy" },
+    { name = "pyright", extra = ["nodejs"] },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "ruff" },
+]
+test = [
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "bumble", specifier = "==0.0.235" },
+    { name = "cyclopts", specifier = "==5.2.0" },
+    { name = "msgspec", specifier = "==0.22.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "camas", extras = ["mcp"], specifier = "==0.1.31" },
+    { name = "mypy", specifier = "==2.4.0" },
+    { name = "pyright", extras = ["nodejs"], specifier = "==1.1.414" },
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-asyncio", specifier = "==1.4.0" },
+    { name = "ruff", specifier = "==0.17.0" },
+]
+test = [
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-asyncio", specifier = "==1.4.0" },
+]
+
+[[package]]
 name = "pathspec"
 version = "1.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1145,51 +1190,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e9/0c/6efb252d091ecccd7d62048ae11f0ea35cd75a4fbaeea5e30f9c3bf91d10/starlette-1.8.0.tar.gz", hash = "sha256:1565dc0b35d5737a271ed1e0e04e949f4e81198799f216d2667b0a0fb9cf9522", size = 2730457, upload-time = "2026-10-13T07:54:39.53Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/b0/5742e4ac7af5eb58ec3470a537a49d7aa507e5539413e504b3a65ef50ba8/starlette-1.8.0-py3-none-any.whl", hash = "sha256:dfdd6b29c26483288088d990eee59631dedadd66ce20d203402a7ca8e3c4656f", size = 79612, upload-time = "2026-10-13T07:54:38.019Z" },
-]
-
-[[package]]
-name = "tiktok-clicker"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "bumble" },
-    { name = "cyclopts" },
-    { name = "msgspec" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "camas", extra = ["mcp"] },
-    { name = "mypy" },
-    { name = "pyright", extra = ["nodejs"] },
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
-    { name = "ruff" },
-]
-test = [
-    { name = "pytest" },
-    { name = "pytest-asyncio" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "bumble", specifier = "==0.0.235" },
-    { name = "cyclopts", specifier = "==5.2.0" },
-    { name = "msgspec", specifier = "==0.22.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "camas", extras = ["mcp"], specifier = "==0.1.31" },
-    { name = "mypy", specifier = "==2.4.0" },
-    { name = "pyright", extras = ["nodejs"], specifier = "==1.1.414" },
-    { name = "pytest", specifier = "==9.1.1" },
-    { name = "pytest-asyncio", specifier = "==1.4.0" },
-    { name = "ruff", specifier = "==0.17.0" },
-]
-test = [
-    { name = "pytest", specifier = "==9.1.1" },
-    { name = "pytest-asyncio", specifier = "==1.4.0" },
 ]
 
 [[package]]

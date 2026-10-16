@@ -13,10 +13,10 @@ from typing import TYPE_CHECKING, Annotated, Final
 
 from cyclopts import App, Parameter
 
-from tiktok_clicker.guard import judge
-from tiktok_clicker.guided import Session, StepContext, Terminal, router, run_guided
-from tiktok_clicker.journal import journal, read_journal
-from tiktok_clicker.kindle import (
+from page_turner.guard import judge
+from page_turner.guided import Session, StepContext, Terminal, router, run_guided
+from page_turner.journal import journal, read_journal
+from page_turner.kindle import (
 	AuditEntry,
 	Ran,
 	Refused,
@@ -32,19 +32,19 @@ from tiktok_clicker.kindle import (
 	remote_md5,
 	summary,
 )
-from tiktok_clicker.link import hci_device
-from tiktok_clicker.model import Button, DeviceEvent, InitiatorKeys, Mode, Started
-from tiktok_clicker.plan import guided_plan
-from tiktok_clicker.render import render_journal
-from tiktok_clicker.soak import describe_soak, soak_link
+from page_turner.link import hci_device
+from page_turner.model import Button, DeviceEvent, InitiatorKeys, Mode, Started
+from page_turner.plan import guided_plan
+from page_turner.render import render_journal
+from page_turner.soak import describe_soak, soak_link
 
 if TYPE_CHECKING:
 	from collections.abc import AsyncGenerator
 
 app: Final = App(
-	name="tiktok-clicker",
+	name="page-turner",
 	help="Probe BLE HID ring remotes over a Bumble HCI controller.",
-	version=version("tiktok-clicker"),
+	version=version("page-turner"),
 )
 
 GUIDE: Final = """
@@ -64,7 +64,7 @@ class LinkOptions:
 	hci: Annotated[
 		str,
 		Parameter(
-			env_var="TIKTOK_CLICKER_HCI",
+			env_var="PAGE_TURNER_HCI",
 			help="Bumble transport of the HCI controller, e.g. serial:COM3,1000000,rtscts.",
 		),
 	]
@@ -102,7 +102,7 @@ async def capture_session(
 			Started(
 				t=clock(),
 				utc=datetime.now(UTC).isoformat(),
-				version=version("tiktok-clicker"),
+				version=version("page-turner"),
 				hci=options.hci,
 				target=address,
 				initiator_keys=options.initiator_keys,
@@ -170,11 +170,11 @@ app.command(kindle)
 @dataclass(frozen=True, kw_only=True)
 class KindleOptions:
 	host: Annotated[
-		str, Parameter(env_var="TIKTOK_CLICKER_KINDLE", help="The Kindle's address on the LAN.")
+		str, Parameter(env_var="PAGE_TURNER_KINDLE", help="The Kindle's address on the LAN.")
 	]
 	port: Annotated[int, Parameter(help="Its SSH port.")] = 2222
 	user: Annotated[str, Parameter(help="SSH user.")] = "root"
-	ssh: Annotated[Path, Parameter(env_var="TIKTOK_CLICKER_SSH", help="ssh client to run.")] = Path(
+	ssh: Annotated[Path, Parameter(env_var="PAGE_TURNER_SSH", help="ssh client to run.")] = Path(
 		"ssh"
 	)
 	audit: Annotated[Path, Parameter(help="Journal of every command, run or refused.")] = Path(

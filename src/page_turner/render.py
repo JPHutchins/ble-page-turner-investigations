@@ -3,8 +3,8 @@
 from collections import Counter
 from typing import TYPE_CHECKING
 
-from tiktok_clicker.gatt import input_report_ids, report_maps
-from tiktok_clicker.model import (
+from page_turner.gatt import input_report_ids, report_maps
+from page_turner.model import (
 	Connected,
 	DeviceEvent,
 	Disconnected,
@@ -21,7 +21,7 @@ from tiktok_clicker.model import (
 	StepEnded,
 	Value,
 )
-from tiktok_clicker.plan import instruction
+from page_turner.plan import instruction
 
 if TYPE_CHECKING:
 	from collections.abc import Iterable
@@ -41,7 +41,7 @@ def describe(entry: Entry) -> str:
 	"""
 	match entry:
 		case Started(utc=utc, version=version, hci=hci, target=target):
-			return f"started {utc} tiktok-clicker {version}, hci {hci}, target {target}"
+			return f"started {utc} page-turner {version}, hci {hci}, target {target}"
 		case Connected(t=t, peer=peer, gatt=gatt):
 			return (
 				f"{t:8.3f}s linked to {peer}: input reports {sorted(input_report_ids(gatt).values())}, "

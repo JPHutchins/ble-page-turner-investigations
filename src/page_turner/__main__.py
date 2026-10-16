@@ -1,4 +1,4 @@
-from tiktok_clicker.cli import main
+from page_turner.cli import main
 
 if __name__ == "__main__":
 	main()

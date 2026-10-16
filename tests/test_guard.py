@@ -1,7 +1,7 @@
 import pytest
 
-from tiktok_clicker.guard import Access, Allowed, Denied, judge
-from tiktok_clicker.kindle import md5_command, pull_command, push_command
+from page_turner.guard import Access, Allowed, Denied, judge
+from page_turner.kindle import md5_command, pull_command, push_command
 
 READS = (
 	"cat /proc/bus/input/devices",

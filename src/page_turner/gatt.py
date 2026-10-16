@@ -10,7 +10,7 @@ from bumble.gatt import (
 	GATT_REPORT_REFERENCE_DESCRIPTOR,
 )
 
-from tiktok_clicker.model import GattCharacteristic, GattService, NotRead, Read, ReadFailed, Value
+from page_turner.model import GattCharacteristic, GattService, NotRead, Read, ReadFailed, Value
 
 if TYPE_CHECKING:
 	from collections.abc import Iterable, Iterator

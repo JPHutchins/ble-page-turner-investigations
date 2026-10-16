@@ -1,7 +1,7 @@
 from typing import Final
 
-from tiktok_clicker.gatt import PROTOCOL_MODE, REPORT, REPORT_MAP, REPORT_REFERENCE
-from tiktok_clicker.model import (
+from page_turner.gatt import PROTOCOL_MODE, REPORT, REPORT_MAP, REPORT_REFERENCE
+from page_turner.model import (
 	GattCharacteristic,
 	GattDescriptor,
 	GattService,

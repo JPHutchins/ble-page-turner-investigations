@@ -1,13 +1,13 @@
 [project]
-name = "tiktok-clicker"
+name = "page-turner"
 version = "0.1.0"
-description = "Probe BLE HID ring remotes (\"TikTok clickers\") over a Bumble HCI controller."
+description = "Probe BLE HID page-turner remotes over a Bumble HCI controller, and test them on a Kindle with guard rails."
 authors = [{ name = "J.P. Hutchins", email = "jphutchins@gmail.com" }]
 requires-python = ">=3.14"
 dependencies = ["bumble==0.0.235", "cyclopts==5.2.0", "msgspec==0.22.0"]
 
 [project.scripts]
-tiktok-clicker = "tiktok_clicker.cli:main"
+page-turner = "page_turner.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]

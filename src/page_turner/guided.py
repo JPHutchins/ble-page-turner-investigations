@@ -3,7 +3,7 @@
 import asyncio
 from typing import TYPE_CHECKING, NamedTuple, Protocol
 
-from tiktok_clicker.link import (
+from page_turner.link import (
 	ADVERTISEMENT_TIMEOUT_SECONDS,
 	Clock,
 	Linked,
@@ -11,7 +11,7 @@ from tiktok_clicker.link import (
 	Record,
 	ring_link,
 )
-from tiktok_clicker.model import (
+from page_turner.model import (
 	Connected,
 	DeviceEvent,
 	Disconnected,
@@ -25,8 +25,8 @@ from tiktok_clicker.model import (
 	StepEnded,
 	Verdict,
 )
-from tiktok_clicker.plan import Answer, default_verdict, instruction, parse_answer
-from tiktok_clicker.render import describe, summarize
+from page_turner.plan import Answer, default_verdict, instruction, parse_answer
+from page_turner.render import describe, summarize
 
 if TYPE_CHECKING:
 	from bumble.device import Device

@@ -23,8 +23,8 @@ from bumble.transport import open_transport
 from bumble.transport.common import SnoopingTransport
 from bumble.utils import EventWatcher
 
-from tiktok_clicker.gatt import boot_protocol_handles, input_report_ids, uuid_text
-from tiktok_clicker.model import (
+from page_turner.gatt import boot_protocol_handles, input_report_ids, uuid_text
+from page_turner.model import (
 	Connected,
 	Disconnected,
 	Entry,
@@ -130,7 +130,7 @@ async def hci_device(
 	async with SnoopingTransport.create_with(
 		await open_transport(spec), create_snooper(btsnoop_spec(snoop))
 	) as hci:
-		device = Device.with_hci("tiktok-clicker", Address(own_address), hci.source, hci.sink)
+		device = Device.with_hci("page-turner", Address(own_address), hci.source, hci.sink)
 		device.keystore = MemoryKeyStore()
 		device.pairing_config_factory = passthrough_pairing(initiator_keys)
 		await device.power_on()

@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING, Final
 
 import msgspec
 
-from tiktok_clicker.model import Entry
+from page_turner.model import Entry
 
 if TYPE_CHECKING:
 	from collections.abc import Callable, Generator
@@ -17,7 +17,7 @@ _decoder: Final = msgspec.json.Decoder[Entry](Entry)
 def decode_entries(lines: bytes) -> tuple[Entry, ...]:
 	r"""Decode a journal's bytes, skipping blank lines.
 
-	>>> from tiktok_clicker.model import Disconnected
+	>>> from page_turner.model import Disconnected
 	>>> decode_entries(b'{"kind":"disconnected","t":1.5,"reason":19}\n\n')
 	(Disconnected(t=1.5, reason=19),)
 	"""
@@ -27,7 +27,7 @@ def decode_entries(lines: bytes) -> tuple[Entry, ...]:
 def encode_entry(entry: Entry) -> bytes:
 	r"""Encode one journal line.
 
-	>>> from tiktok_clicker.model import Disconnected
+	>>> from page_turner.model import Disconnected
 	>>> encode_entry(Disconnected(t=1.5, reason=19))
 	b'{"kind":"disconnected","t":1.5,"reason":19}\n'
 	"""

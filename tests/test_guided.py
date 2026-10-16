@@ -2,8 +2,8 @@ import asyncio
 from collections.abc import Iterator
 from typing import Final
 
-from tiktok_clicker.guided import StepContext, router, run_steps
-from tiktok_clicker.model import (
+from page_turner.guided import StepContext, router, run_steps
+from page_turner.model import (
 	Button,
 	DeviceEvent,
 	Disconnected,

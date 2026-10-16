@@ -2,7 +2,7 @@
 
 from typing import TYPE_CHECKING, NamedTuple
 
-from tiktok_clicker.model import Button, Hold, Mode, Press, Step, SwitchMode, Verdict
+from page_turner.model import Button, Hold, Mode, Press, Step, SwitchMode, Verdict
 
 if TYPE_CHECKING:
 	from collections.abc import Iterable, Sequence

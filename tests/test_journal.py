@@ -2,8 +2,8 @@ from typing import TYPE_CHECKING, Final
 
 from ring_gatt import hid_service
 
-from tiktok_clicker.journal import decode_entries, encode_entry, journal, read_journal
-from tiktok_clicker.model import (
+from page_turner.journal import decode_entries, encode_entry, journal, read_journal
+from page_turner.model import (
 	Button,
 	Connected,
 	Disconnected,

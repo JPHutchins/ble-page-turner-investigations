@@ -1,7 +1,7 @@
 from ring_gatt import hid_service
 
-from tiktok_clicker.gatt import boot_protocol_handles, input_report_ids, report_maps
-from tiktok_clicker.model import NotRead, ReadFailed, Value
+from page_turner.gatt import boot_protocol_handles, input_report_ids, report_maps
+from page_turner.model import NotRead, ReadFailed, Value
 
 
 def test_input_report_ids_skip_output_reports() -> None:
