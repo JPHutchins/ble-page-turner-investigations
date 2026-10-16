@@ -33,55 +33,6 @@ class Simple(NamedTuple):
 	writes_to: tuple[str, ...]
 
 
-INSTALL: Final = PurePosixPath("/mnt/us/kindle-button-mapper")
-SCRATCH: Final = (PurePosixPath("/mnt/us/kbm-hil"), PurePosixPath("/tmp/kbm-hil"))
-APP_CACHE: Final = PurePosixPath("/var/local/mesquite/com.lzampier.mappermanager")
-WRITABLE: Final = (INSTALL, *SCRATCH, APP_CACHE)
-REMOVABLE_TREES: Final = (*SCRATCH, APP_CACHE)
-
-NEVER: Final = {
-	program: reason
-	for reason, programs in (
-		("remounts or changes filesystems", ("mntroot", "mount", "umount", "mkfs", "fdisk")),
-		("writes raw storage or boot settings", ("dd", "flash_erase", "nandwrite", "fw_setenv")),
-		("changes power state", ("reboot", "shutdown", "halt", "poweroff")),
-		("edits system databases", ("sqlite3",)),
-		("changes the kernel", ("insmod", "rmmod", "modprobe")),
-		("kills by name", ("killall", "pkill")),
-		("drives the system UI; do that on the device", ("lipc-set-prop",)),
-		(
-			"runs code the guard cannot read",
-			(
-				*("sh", "ash", "bash", "busybox", "eval", "exec", "xargs", "source", "."),
-				*("nohup", "env", "su", "sudo", "chroot", "awk", "sed", "perl", "python"),
-				*("python3", "lua", "tee", "curl"),
-			),
-		),
-	)
-	for program in programs
-}
-READERS: Final = frozenset(
-	{
-		*("cat", "ls", "grep", "head", "tail", "df", "du", "ps", "uname", "md5sum", "sha256sum"),
-		*("stat", "wc", "hexdump", "od", "date", "uptime", "free", "find", "readlink", "dmesg"),
-		*("which", "echo", "test", "true", "sleep", "sort", "uniq", "cut", "tr", "strings"),
-		*("basename", "dirname", "pwd", "id", "pidof", "lipc-get-prop", "evtest"),
-	}
-)
-WRITERS: Final = frozenset({"cp", "mv", "mkdir", "chmod", "rm", "touch"})
-FIND_ACTIONS: Final = frozenset({"-delete", "-exec", "-execdir", "-ok", "-okdir", "-fprint"})
-HELPER: Final = "http://127.0.0.1:8322"
-HELPER_READS: Final = frozenset({"/status", "/devices", "/resolve", "/actions", "/logs", "/config"})
-OUR_JOB: Final = "kindle-button-mapper"
-
-CONTROL: Final = frozenset({";", "&&", "||", "|"})
-REDIRECTS: Final = frozenset({">", ">>", ">|", "&>", "&>>"})
-REFERENCES: Final = frozenset({"<", ">&", "<&"})
-PUNCTUATION: Final = frozenset("();<>|&")
-SIGNAL_OR_PID: Final = re.compile(r"-(?:[A-Z]+|\d+)|\d+")
-WRITE_FLAG: Final = "changes the device: review it, then rerun with --write"
-
-
 def judge(command: str, *, write: bool) -> Verdict:
 	"""Whether a command may run, and whether it changes the device.
 
@@ -110,38 +61,6 @@ def judge(command: str, *, write: bool) -> Verdict:
 			return Allowed(Access.WRITE) if write else Denied(WRITE_FLAG)
 		case None:
 			return Allowed(Access.READ)
-
-
-def tokens(command: str) -> list[str]:
-	lexer = shlex.shlex(command, posix=True, punctuation_chars=True)
-	lexer.whitespace_split = True
-	return list(lexer)
-
-
-def simple_commands(words: Sequence[str]) -> Iterator[Simple | Denied]:
-	current: list[str] = []
-	targets: list[str] = []
-	pending: str | None = None
-	for word in (*words, ";"):
-		if pending is not None:
-			targets.extend((word,) if pending in REDIRECTS else ())
-			pending = None
-		elif word in CONTROL:
-			if current:
-				yield Simple(current[0], tuple(current[1:]), tuple(targets))
-			elif word != ";":
-				yield Denied(f"{word!r} without a command before it")
-			current, targets = [], []
-		elif word in REDIRECTS | REFERENCES:
-			if current[1:] and current[-1].isdigit():
-				current.pop()
-			pending = word
-		elif set(word) <= PUNCTUATION:
-			yield Denied(f"{word!r}: no subshells or background jobs")
-		else:
-			current.append(word)
-	if pending is not None:
-		yield Denied(f"{pending!r} without a target")
 
 
 def judge_simple(simple: Simple) -> Verdict:
@@ -236,3 +155,84 @@ def inside(path: str, roots: Sequence[PurePosixPath]) -> bool:
 		and ".." not in candidate.parts
 		and any(candidate == root or root in candidate.parents for root in roots)
 	)
+
+
+def simple_commands(words: Sequence[str]) -> Iterator[Simple | Denied]:
+	current: list[str] = []
+	targets: list[str] = []
+	pending: str | None = None
+	for word in (*words, ";"):
+		if pending is not None:
+			targets.extend((word,) if pending in REDIRECTS else ())
+			pending = None
+		elif word in CONTROL:
+			if current:
+				yield Simple(current[0], tuple(current[1:]), tuple(targets))
+			elif word != ";":
+				yield Denied(f"{word!r} without a command before it")
+			current, targets = [], []
+		elif word in REDIRECTS | REFERENCES:
+			if current[1:] and current[-1].isdigit():
+				current.pop()
+			pending = word
+		elif set(word) <= PUNCTUATION:
+			yield Denied(f"{word!r}: no subshells or background jobs")
+		else:
+			current.append(word)
+	if pending is not None:
+		yield Denied(f"{pending!r} without a target")
+
+
+def tokens(command: str) -> list[str]:
+	lexer = shlex.shlex(command, posix=True, punctuation_chars=True)
+	lexer.whitespace_split = True
+	return list(lexer)
+
+
+INSTALL: Final = PurePosixPath("/mnt/us/kindle-button-mapper")
+SCRATCH: Final = (PurePosixPath("/mnt/us/kbm-hil"), PurePosixPath("/tmp/kbm-hil"))
+APP_CACHE: Final = PurePosixPath("/var/local/mesquite/com.lzampier.mappermanager")
+WRITABLE: Final = (INSTALL, *SCRATCH, APP_CACHE)
+REMOVABLE_TREES: Final = (*SCRATCH, APP_CACHE)
+
+NEVER: Final = {
+	program: reason
+	for reason, programs in (
+		("remounts or changes filesystems", ("mntroot", "mount", "umount", "mkfs", "fdisk")),
+		("writes raw storage or boot settings", ("dd", "flash_erase", "nandwrite", "fw_setenv")),
+		("changes power state", ("reboot", "shutdown", "halt", "poweroff")),
+		("edits system databases", ("sqlite3",)),
+		("changes the kernel", ("insmod", "rmmod", "modprobe")),
+		("kills by name", ("killall", "pkill")),
+		("drives the system UI; do that on the device", ("lipc-set-prop",)),
+		(
+			"runs code the guard cannot read",
+			(
+				*("sh", "ash", "bash", "busybox", "eval", "exec", "xargs", "source", "."),
+				*("nohup", "env", "su", "sudo", "chroot", "awk", "sed", "perl", "python"),
+				*("python3", "lua", "tee", "curl"),
+			),
+		),
+	)
+	for program in programs
+}
+READERS: Final = frozenset(
+	{
+		*("cat", "ls", "grep", "head", "tail", "df", "du", "ps", "uname", "md5sum", "sha256sum"),
+		*("stat", "wc", "hexdump", "od", "date", "uptime", "free", "find", "readlink", "dmesg"),
+		*("which", "echo", "test", "true", "sleep", "sort", "uniq", "cut", "tr", "strings"),
+		*("basename", "dirname", "pwd", "id", "pidof", "lipc-get-prop", "evtest"),
+	}
+)
+WRITERS: Final = frozenset({"cp", "mv", "mkdir", "chmod", "rm", "touch"})
+FIND_ACTIONS: Final = frozenset({"-delete", "-exec", "-execdir", "-ok", "-okdir", "-fprint"})
+HELPER: Final = "http://127.0.0.1:8322"
+HELPER_READS: Final = frozenset({"/status", "/devices", "/resolve", "/actions", "/logs", "/config"})
+OUR_JOB: Final = "kindle-button-mapper"
+
+CONTROL: Final = frozenset({";", "&&", "||", "|"})
+REDIRECTS: Final = frozenset({">", ">>", ">|", "&>", "&>>"})
+REFERENCES: Final = frozenset({"<", ">&", "<&"})
+PUNCTUATION: Final = frozenset("();<>|&")
+SIGNAL_OR_PID: Final = re.compile(r"-(?:[A-Z]+|\d+)|\d+")
+WRITE_FLAG: Final = "changes the device: review it, then rerun with --write"

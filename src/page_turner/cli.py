@@ -180,10 +180,23 @@ class KindleOptions:
 	audit: Annotated[Path, Parameter(help="Journal of every command, run or refused.")] = Path(
 		"hil/audit.jsonl"
 	)
+	askpass: Annotated[
+		Path | None,
+		Parameter(
+			env_var="PAGE_TURNER_ASKPASS",
+			help="Program that prints the SSH password; one printing an empty line logs in"
+			" to a device that takes no password.",
+		),
+	] = None
 
 	def target(self) -> Target:
 		return Target(
-			self.host, self.port, self.user, self.ssh, self.audit.with_name("known_hosts")
+			self.host,
+			self.port,
+			self.user,
+			self.ssh,
+			self.audit.with_name("known_hosts"),
+			None if self.askpass is None else self.askpass.resolve(),
 		)
 
 
