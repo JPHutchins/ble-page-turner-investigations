@@ -1,0 +1,25 @@
+[2026-10-17T23:42:08.948Z INFO  kindle_button_mapper::waf_helper] WAF helper listening on 127.0.0.1:8322
+[2026-10-17T23:42:11.781Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-17T23:42:11.782Z INFO  kindle_button_mapper::waf_helper] GET /layouts
+[2026-10-17T23:42:11.784Z INFO  kindle_button_mapper::waf_helper] GET /actions
+[2026-10-17T23:42:11.795Z INFO  kindle_button_mapper::waf_helper] GET /config
+[2026-10-17T23:42:22.338Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T23:42:22.339Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-17T23:42:37.649Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T23:42:37.649Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-17T23:42:41.604Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T23:42:45.662Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T23:42:49.602Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T23:42:56.936Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B
+[2026-10-17T23:42:57.222Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2%2C%2Fdev%2Finput%2Fevent3&timeout=8000
+[2026-10-17T23:43:12.918Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B
+[2026-10-17T23:43:13.231Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2%2C%2Fdev%2Finput%2Fevent3&timeout=8000
+[2026-10-17T23:43:24.589Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B
+[2026-10-17T23:43:24.891Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2%2C%2Fdev%2Finput%2Fevent3&timeout=8000
+[2026-10-17T23:43:40.776Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B
+[2026-10-17T23:43:41.071Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2%2C%2Fdev%2Finput%2Fevent3&timeout=8000
+[2026-10-17T23:43:48.716Z INFO  kindle_button_mapper::waf_helper] GET /resolve?name=F3%20Touchscreen&uniq=EB%3A80%3A03%3A88%3A70%3A8B
+[2026-10-17T23:43:49.031Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2%2C%2Fdev%2Finput%2Fevent3&timeout=8000
+[2026-10-17T23:44:06.668Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-17T23:44:06.686Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-17T23:44:06.694Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place

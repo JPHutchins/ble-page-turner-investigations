@@ -1,0 +1,210 @@
+[2026-10-17T23:35:34.378Z INFO  kindle_button_mapper] Kindle Button Mapper 1.7.4 (build 94b6c9e) starting...
+[2026-10-17T23:35:34.378Z INFO  kindle_button_mapper] Config: devices=0, gestures=0, debounce=0ms, long_press=500ms, repeat=100ms
+[2026-10-17T23:35:34.508Z INFO  kindle_button_mapper::vkeyboard] No page buttons found, page turns go to the window in front
+[2026-10-17T23:35:34.508Z INFO  kindle_button_mapper::vkeyboard] Key injection FIFO at /var/run/kindle-button-mapper-key.fifo
+[2026-10-17T23:44:06.768Z INFO  kindle_button_mapper::reload] Config reloaded in place (generation 1)
+[2026-10-17T23:44:06.768Z INFO  kindle_button_mapper] [f3_touchscreen] new in the config, starting a worker
+[2026-10-17T23:44:06.967Z INFO  kindle_button_mapper::input] Found device at /dev/input/event2
+[2026-10-17T23:44:06.968Z INFO  kindle_button_mapper::input] Grabbed device exclusively
+[2026-10-17T23:44:06.968Z INFO  kindle_button_mapper::input] Reading events from F3 Touchscreen (uniq="EB:80:03:88:70:8B")
+[2026-10-17T23:44:07.057Z INFO  kindle_button_mapper] [f3_touchscreen] not a gamepad, sharing it instead of grabbing
+[2026-10-17T23:44:07.057Z INFO  kindle_button_mapper] [f3_touchscreen] device connected (shared)
+[2026-10-17T23:44:23.832Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:23.935Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:23.935Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:23.943Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:24.046Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:24.046Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:24.048Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:24.249Z INFO  kindle_button_mapper::action] Finished in 305ms: /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:26.184Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:26.186Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:26.186Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:26.296Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:26.400Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:26.400Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:26.403Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:26.599Z INFO  kindle_button_mapper::action] Finished in 302ms: /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:27.823Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:27.825Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:27.825Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:28.036Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:28.038Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:28.038Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:28.041Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:29.260Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:29.263Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:29.263Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:29.373Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:29.375Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:29.376Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:29.479Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:30.796Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:30.899Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:30.899Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:31.009Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:31.013Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:31.013Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:31.015Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:32.235Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:32.338Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:32.338Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:32.449Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:32.451Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:32.451Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:32.453Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:33.266Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:33.269Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:33.269Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:33.479Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:33.481Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:33.481Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:33.484Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:34.802Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:34.905Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:34.905Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:34.914Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:35.020Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:35.020Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:35.020Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:36.542Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:36.645Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:36.645Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:36.653Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:36.758Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:36.758Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:36.758Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:37.773Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:37.775Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:37.775Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:37.885Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:37.889Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:37.889Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:37.890Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:38.905Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:38.907Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:38.907Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:39.016Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:39.022Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:39.022Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:39.022Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:39.935Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:39.937Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:39.937Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:40.046Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:40.049Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:40.049Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:40.052Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:40.964Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:41.068Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:41.068Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:41.076Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:41.180Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:41.180Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:41.181Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:41.993Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:41.995Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:41.995Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:42.104Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:42.106Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:42.106Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:42.210Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:42.923Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:43.027Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:43.027Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:43.137Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:43.141Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:43.141Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:43.143Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:44.055Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:44.057Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:44.057Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:44.167Z INFO  kindle_button_mapper::mapper] Stick left: Left -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:44:44.170Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:44.170Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:44.172Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:45.289Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:45.291Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:45.291Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:45.401Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:45.404Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:45.404Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:45.406Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:46.420Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:46.422Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:46.422Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:46.531Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:46.533Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:46.533Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:46.636Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:47.447Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:44:47.449Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:47.449Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:47.559Z INFO  kindle_button_mapper::mapper] Stick left: Right -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:44:47.561Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:44:47.561Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:44:47.665Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:51.907Z INFO  kindle_button_mapper] keep-awake: re-armed screensaver idle timer
+[2026-10-17T23:46:52.010Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:52.010Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:52.010Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:52.121Z INFO  kindle_button_mapper::mapper] Stick left: Up -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:46:52.124Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:52.124Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:52.126Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:53.244Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:53.245Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:53.245Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:53.356Z INFO  kindle_button_mapper::mapper] Stick left: Up -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:46:53.358Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:53.358Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:53.461Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:54.272Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:54.272Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:54.272Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:54.488Z INFO  kindle_button_mapper::mapper] Stick left: Down -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:46:54.490Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:54.490Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:54.490Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:55.405Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:55.405Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:55.405Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:55.519Z INFO  kindle_button_mapper::mapper] Stick left: Down -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:46:55.624Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:55.624Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:55.624Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:56.438Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:56.438Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:56.438Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:56.552Z INFO  kindle_button_mapper::mapper] Stick left: Down -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:46:56.554Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:56.554Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:56.554Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:57.671Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:57.671Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:57.671Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:57.782Z INFO  kindle_button_mapper::mapper] Stick left: Up -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:46:57.792Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:57.792Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:57.895Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:58.810Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:58.810Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:58.810Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:58.921Z INFO  kindle_button_mapper::mapper] Stick left: Up -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:46:59.024Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:59.024Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:46:59.026Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:59.939Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:46:59.939Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:46:59.939Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:47:00.156Z INFO  kindle_button_mapper::mapper] Stick left: Down -> /mnt/us/kindle-button-mapper/scripts/auto.sh prev_page
+[2026-10-17T23:47:00.158Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:47:00.158Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:47:00.158Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:47:01.173Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:47:01.173Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
+[2026-10-17T23:47:01.173Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:47:01.285Z INFO  kindle_button_mapper::mapper] Stick left: Up -> /mnt/us/kindle-button-mapper/scripts/auto.sh next_page
+[2026-10-17T23:47:01.289Z INFO  kindle_button_mapper::mapper] Button: BTN_TOUCH (code: 330) [unmapped]
+[2026-10-17T23:47:01.289Z INFO  kindle_button_mapper::mapper] Button: BTN_0 (code: 256) [unmapped]
+[2026-10-17T23:47:01.290Z INFO  kindle_button_mapper::mapper] Button: BTN_TOOL_PEN (code: 320) [unmapped]
