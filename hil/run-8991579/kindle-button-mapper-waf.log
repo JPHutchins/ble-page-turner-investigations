@@ -1,0 +1,16 @@
+[2026-10-17T22:48:51.436Z INFO  kindle_button_mapper::waf_helper] WAF helper listening on 127.0.0.1:8322
+[2026-10-17T22:48:54.197Z INFO  kindle_button_mapper::waf_helper] GET /status
+[2026-10-17T22:48:54.197Z INFO  kindle_button_mapper::waf_helper] GET /layouts
+[2026-10-17T22:48:54.198Z INFO  kindle_button_mapper::waf_helper] GET /actions
+[2026-10-17T22:48:54.211Z INFO  kindle_button_mapper::waf_helper] GET /config
+[2026-10-17T22:49:14.824Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T22:49:15.108Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-17T22:49:34.102Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T22:49:34.418Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-17T22:50:46.037Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T22:50:46.347Z INFO  kindle_button_mapper::waf_helper] GET /capture?device=%2Fdev%2Finput%2Fevent2&timeout=8000
+[2026-10-17T22:51:05.860Z INFO  kindle_button_mapper::waf_helper] GET /devices
+[2026-10-17T22:51:06.168Z INFO  kindle_button_mapper::waf_helper] GET /record-gesture?device=%2Fdev%2Finput%2Fevent2&timeout=12000
+[2026-10-17T22:51:23.963Z INFO  kindle_button_mapper::waf_helper] POST /config
+[2026-10-17T22:51:23.981Z INFO  kindle_button_mapper::waf_helper] POST /reload
+[2026-10-17T22:51:23.988Z INFO  kindle_button_mapper::waf_helper] Asked the daemon to reload its config in place
